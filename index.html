@@ -5,6 +5,10 @@
 	<title>Document</title>
 </head>
 <body ng-controller="mainController">
+	
+	<button ng-click="next()" ng-disabled="currentPage >= maxPages">Next</button>
+	<button ng-click="previous()" ng-disabled="currentPage <=1">Previous</button>
+	
 	<div ng-repeat="user in users">
 		{{user.first_name}}
 		{{user.last_name}}
